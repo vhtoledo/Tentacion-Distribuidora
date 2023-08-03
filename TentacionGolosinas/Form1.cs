@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibreriaDLL;
 
 namespace TentacionGolosinas
 {
@@ -25,17 +26,7 @@ namespace TentacionGolosinas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            { 
-                SqlConnection conexion = new SqlConnection("Data Source=.;Initial Catalog=Tentacion;Integrated Security=True");
-                conexion.Open();
-                MessageBox.Show("Conexión exitosa");
-            }
-            catch(Exception error) 
-            {
-                MessageBox.Show("Ha ocurrido un error. Intente nuevamente " + error.Message);
-            }
-
+            Biblioteca.Herramientas("Select * FROM clientes where id=1");
         }
     }
 }

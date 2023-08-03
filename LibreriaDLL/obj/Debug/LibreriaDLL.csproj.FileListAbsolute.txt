@@ -1,0 +1,6 @@
+C:\Cursos\C#\TentacionGolosinas\LibreriaDLL\bin\Debug\LibreriaDLL.dll
+C:\Cursos\C#\TentacionGolosinas\LibreriaDLL\bin\Debug\LibreriaDLL.pdb
+C:\Cursos\C#\TentacionGolosinas\LibreriaDLL\obj\Debug\LibreriaDLL.csproj.AssemblyReference.cache
+C:\Cursos\C#\TentacionGolosinas\LibreriaDLL\obj\Debug\LibreriaDLL.csproj.CoreCompileInputs.cache
+C:\Cursos\C#\TentacionGolosinas\LibreriaDLL\obj\Debug\LibreriaDLL.dll
+C:\Cursos\C#\TentacionGolosinas\LibreriaDLL\obj\Debug\LibreriaDLL.pdb

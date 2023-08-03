@@ -9,3 +9,6 @@ C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.
 C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.csproj.CoreCompileInputs.cache
 C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.exe
 C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.pdb
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\bin\Debug\LibreriaDLL.dll
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\bin\Debug\LibreriaDLL.pdb
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.csproj.CopyComplete
