@@ -1,0 +1,11 @@
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\bin\Debug\TentacionGolosinas.exe.config
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\bin\Debug\TentacionGolosinas.exe
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\bin\Debug\TentacionGolosinas.pdb
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.csproj.AssemblyReference.cache
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.csproj.SuggestedBindingRedirects.cache
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.Form1.resources
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.Properties.Resources.resources
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.csproj.GenerateResource.cache
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.csproj.CoreCompileInputs.cache
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.exe
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.pdb
