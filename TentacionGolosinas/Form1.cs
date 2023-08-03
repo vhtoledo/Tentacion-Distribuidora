@@ -26,7 +26,7 @@ namespace TentacionGolosinas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Biblioteca.Herramientas("Select * FROM clientes where id=1");
+            Biblioteca.Herramientas("Select * FROM Clientes where id=1");
         }
     }
 }
