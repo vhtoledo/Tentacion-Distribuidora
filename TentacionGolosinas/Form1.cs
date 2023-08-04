@@ -26,7 +26,33 @@ namespace TentacionGolosinas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Biblioteca.Herramientas("Select * FROM Clientes where id=1");
+            try
+            {
+                string validar = string.Format("Select * FROM Usuarios WHERE account='{0}' AND password='{1}'", textUsuario.Text.Trim(), textPassword.Text.Trim());
+                DataSet conectar = Biblioteca.Herramientas(validar);
+
+                string cuenta = conectar.Tables[0].Rows[0]["account"].ToString().Trim();
+                string contrasena = conectar.Tables[0].Rows[0]["password"].ToString().Trim();
+
+                if (cuenta == textUsuario.Text.Trim() && contrasena == textPassword.Text.Trim())
+                {
+                    MessageBox.Show("Inicio de sesión correcto");
+                }
+            }
+            catch(Exception error) 
+            {
+                MessageBox.Show("Usuario o contraseña inválidos " + error);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
