@@ -12,9 +12,9 @@ using LibreriaDLL;
 
 namespace TentacionGolosinas
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -36,10 +36,21 @@ namespace TentacionGolosinas
 
                 if (cuenta == textUsuario.Text.Trim() && contrasena == textPassword.Text.Trim())
                 {
-                    MessageBox.Show("Inicio de sesión correcto");
+                    if (Convert.ToBoolean(conectar.Tables[0].Rows[0]["validar_Admin"].ToString().Trim()) == true)
+                    {
+                        Administrador Admin = new Administrador();
+                        this.Hide();
+                        Admin.Show();
+                    }
+                    else
+                    {
+                        Usuario User = new Usuario();
+                        this.Hide();
+                        User.Show();
+                    }
                 }
             }
-            catch(Exception error) 
+            catch (Exception error)
             {
                 MessageBox.Show("Usuario o contraseña inválidos " + error);
             }
@@ -53,6 +64,11 @@ namespace TentacionGolosinas
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
