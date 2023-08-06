@@ -19,6 +19,8 @@ namespace TentacionGolosinas
             InitializeComponent();
         }
 
+        public static String Codigo = "";
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -31,6 +33,7 @@ namespace TentacionGolosinas
                 string validar = string.Format("Select * FROM Usuarios WHERE account='{0}' AND password='{1}'", textUsuario.Text.Trim(), textPassword.Text.Trim());
                 DataSet conectar = Biblioteca.Herramientas(validar);
 
+                Codigo = conectar.Tables[0].Rows[0]["id_usuario"].ToString().Trim();
                 string cuenta = conectar.Tables[0].Rows[0]["account"].ToString().Trim();
                 string contrasena = conectar.Tables[0].Rows[0]["password"].ToString().Trim();
 

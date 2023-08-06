@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lAdmin = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lAdminUser = new System.Windows.Forms.Label();
+            this.lAdminCodigo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,6 +46,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(422, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -65,14 +67,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Administrador:";
             // 
-            // label4
+            // lAdmin
             // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(167, 30);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 27);
-            this.label4.TabIndex = 4;
+            this.lAdmin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lAdmin.Location = new System.Drawing.Point(167, 30);
+            this.lAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lAdmin.Name = "lAdmin";
+            this.lAdmin.Size = new System.Drawing.Size(159, 27);
+            this.lAdmin.TabIndex = 4;
+            this.lAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -132,23 +135,25 @@
             this.button5.Text = "Salir";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lAdminUser
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(167, 81);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 27);
-            this.label5.TabIndex = 12;
+            this.lAdminUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lAdminUser.Location = new System.Drawing.Point(167, 81);
+            this.lAdminUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lAdminUser.Name = "lAdminUser";
+            this.lAdminUser.Size = new System.Drawing.Size(159, 27);
+            this.lAdminUser.TabIndex = 12;
+            this.lAdminUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // lAdminCodigo
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(167, 130);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 27);
-            this.label6.TabIndex = 13;
+            this.lAdminCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lAdminCodigo.Location = new System.Drawing.Point(167, 130);
+            this.lAdminCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lAdminCodigo.Name = "lAdminCodigo";
+            this.lAdminCodigo.Size = new System.Drawing.Size(159, 27);
+            this.lAdminCodigo.TabIndex = 13;
+            this.lAdminCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -178,29 +183,32 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TentacionGolosinas.Properties.Resources.fondo;
+            this.BackgroundImage = global::TentacionGolosinas.Properties.Resources.fondo4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(677, 326);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lAdminCodigo);
+            this.Controls.Add(this.lAdminUser);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lAdmin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(693, 365);
+            this.MinimumSize = new System.Drawing.Size(693, 365);
             this.Name = "Administrador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Administrador_FormClosed);
+            this.Load += new System.EventHandler(this.Administrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -211,14 +219,14 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lAdmin;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lAdminUser;
+        private System.Windows.Forms.Label lAdminCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }

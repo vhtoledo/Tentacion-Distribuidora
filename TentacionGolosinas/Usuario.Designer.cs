@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lUserCodigo = new System.Windows.Forms.Label();
+            this.lUser = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,23 +69,25 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Usuario:";
             // 
-            // label6
+            // lUserCodigo
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(158, 134);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 27);
-            this.label6.TabIndex = 25;
+            this.lUserCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lUserCodigo.Location = new System.Drawing.Point(158, 134);
+            this.lUserCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lUserCodigo.Name = "lUserCodigo";
+            this.lUserCodigo.Size = new System.Drawing.Size(159, 27);
+            this.lUserCodigo.TabIndex = 25;
+            this.lUserCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lUser
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(158, 85);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 27);
-            this.label5.TabIndex = 24;
+            this.lUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lUser.Location = new System.Drawing.Point(158, 85);
+            this.lUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lUser.Name = "lUser";
+            this.lUser.Size = new System.Drawing.Size(159, 27);
+            this.lUser.TabIndex = 24;
+            this.lUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button5
             // 
@@ -134,14 +136,15 @@
             this.button1.Text = "Principal";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // lNombre
             // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(158, 34);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 27);
-            this.label4.TabIndex = 18;
+            this.lNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lNombre.Location = new System.Drawing.Point(158, 34);
+            this.lNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lNombre.Name = "lNombre";
+            this.lNombre.Size = new System.Drawing.Size(159, 27);
+            this.lNombre.TabIndex = 18;
+            this.lNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -158,6 +161,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(413, 34);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -169,26 +174,29 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TentacionGolosinas.Properties.Resources.fondo1;
+            this.BackgroundImage = global::TentacionGolosinas.Properties.Resources.fondo5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(677, 326);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lUserCodigo);
+            this.Controls.Add(this.lUser);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(693, 365);
+            this.MinimumSize = new System.Drawing.Size(693, 365);
             this.Name = "Usuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Usuario_FormClosed);
+            this.Load += new System.EventHandler(this.Usuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,13 +207,13 @@
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lUserCodigo;
+        private System.Windows.Forms.Label lUser;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

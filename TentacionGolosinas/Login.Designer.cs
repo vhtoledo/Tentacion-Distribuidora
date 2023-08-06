@@ -36,6 +36,7 @@
             this.textUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,9 +66,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(117, 38);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::TentacionGolosinas.Properties.Resources.logo2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 38);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(348, 91);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -90,7 +94,8 @@
             this.textUsuario.Location = new System.Drawing.Point(99, 252);
             this.textUsuario.Name = "textUsuario";
             this.textUsuario.Size = new System.Drawing.Size(179, 27);
-            this.textUsuario.TabIndex = 4;
+            this.textUsuario.TabIndex = 0;
+            this.textUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -110,15 +115,30 @@
             this.textPassword.Location = new System.Drawing.Point(99, 327);
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(179, 27);
-            this.textPassword.TabIndex = 6;
+            this.textPassword.TabIndex = 1;
+            this.textPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(95, 162);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(183, 22);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "INICIAR SESIÓN";
             // 
             // Login
             // 
+            this.AcceptButton = this.btnIniciar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TentacionGolosinas.Properties.Resources.fondo3;
+            this.BackgroundImage = global::TentacionGolosinas.Properties.Resources.fondo31;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(376, 544);
+            this.ClientSize = new System.Drawing.Size(372, 540);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textUsuario);
@@ -133,6 +153,7 @@
             this.MaximumSize = new System.Drawing.Size(392, 583);
             this.MinimumSize = new System.Drawing.Size(392, 583);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -151,6 +172,7 @@
         private System.Windows.Forms.TextBox textUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textPassword;
+        private System.Windows.Forms.Label label3;
     }
 }
 
