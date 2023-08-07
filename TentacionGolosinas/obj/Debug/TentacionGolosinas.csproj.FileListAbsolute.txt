@@ -14,3 +14,4 @@ C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.
 C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.Administrador.resources
 C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.Login.resources
 C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.Usuario.resources
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.FormBase.resources

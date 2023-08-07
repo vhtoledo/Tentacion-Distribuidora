@@ -11,7 +11,7 @@ using LibreriaDLL;
 
 namespace TentacionGolosinas
 {
-    public partial class Administrador : Form
+    public partial class Administrador : FormBase
     {
         public Administrador()
         {

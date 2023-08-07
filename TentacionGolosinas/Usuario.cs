@@ -12,7 +12,7 @@ using LibreriaDLL;
 
 namespace TentacionGolosinas
 {
-    public partial class Usuario : Form
+    public partial class Usuario : FormBase
     {
         public Usuario()
         {

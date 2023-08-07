@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lUserCodigo = new System.Windows.Forms.Label();
             this.lUser = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,6 +41,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(465, 279);
+            this.btnSalir.Size = new System.Drawing.Size(149, 25);
             // 
             // label3
             // 
@@ -88,17 +93,6 @@
             this.lUser.Size = new System.Drawing.Size(159, 27);
             this.lUser.TabIndex = 24;
             this.lUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(465, 282);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 24);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Salir";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -181,7 +175,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lUserCodigo);
             this.Controls.Add(this.lUser);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -197,6 +190,17 @@
             this.Text = "Usuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Usuario_FormClosed);
             this.Load += new System.EventHandler(this.Usuario_Load);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.lNombre, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.button3, 0);
+            this.Controls.SetChildIndex(this.button4, 0);
+            this.Controls.SetChildIndex(this.lUser, 0);
+            this.Controls.SetChildIndex(this.lUserCodigo, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.btnSalir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -209,7 +213,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lUserCodigo;
         private System.Windows.Forms.Label lUser;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
