@@ -106,7 +106,7 @@
             // textPassword
             // 
             this.textPassword.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPassword.Location = new System.Drawing.Point(99, 327);
+            this.textPassword.Location = new System.Drawing.Point(98, 327);
             this.textPassword.Name = "textPassword";
             this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(179, 27);

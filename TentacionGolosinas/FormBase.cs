@@ -19,10 +19,29 @@ namespace TentacionGolosinas
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Desea salir? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            if (MessageBox.Show("Desea salir? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 this.Close();
             }
+        }
+        public virtual void Elminar()
+        {
+
+        }
+
+        public virtual void Nuevo()
+        {
+
+        }
+
+        public virtual void Consultar()
+        {
+
+        }
+
+        public virtual Boolean Guardar()
+        {
+            return false;
         }
     }
 }

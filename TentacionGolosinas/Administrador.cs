@@ -36,5 +36,12 @@ namespace TentacionGolosinas
             pictureBox1.Image = Image.FromFile(imagen);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ContenedorPrincipal con_principal = new ContenedorPrincipal();
+            this.Hide();
+            con_principal.Show();
+        }
     }
 }

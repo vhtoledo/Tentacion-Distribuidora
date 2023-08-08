@@ -36,5 +36,12 @@ namespace TentacionGolosinas
             string imagen = Data.Tables[0].Rows[0]["imagen"].ToString();
             pictureBox1.Image = Image.FromFile(imagen);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ContenedorPrincipal con_principal = new ContenedorPrincipal();
+            this.Hide();
+            con_principal.Show();
+        }
     }
 }
