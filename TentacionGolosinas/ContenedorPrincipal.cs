@@ -110,5 +110,12 @@ namespace TentacionGolosinas
             ManCli.MdiParent = this;
             ManCli.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoProductos ManPro = new MantenimientoProductos();
+            ManPro.MdiParent = this;
+            ManPro.Show();
+        }
     }
 }

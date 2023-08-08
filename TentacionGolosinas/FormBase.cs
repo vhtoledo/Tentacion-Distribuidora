@@ -24,7 +24,7 @@ namespace TentacionGolosinas
                 this.Close();
             }
         }
-        public virtual void Elminar()
+        public virtual void Eliminar()
         {
 
         }

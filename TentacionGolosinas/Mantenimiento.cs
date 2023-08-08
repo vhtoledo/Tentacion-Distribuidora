@@ -34,7 +34,7 @@ namespace TentacionGolosinas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Elminar();
+            Eliminar();
         }
     }
 }
