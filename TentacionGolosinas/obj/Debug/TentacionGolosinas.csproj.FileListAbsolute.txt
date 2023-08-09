@@ -21,3 +21,5 @@ C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.
 C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.ContenedorPrincipal.resources
 C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.MantenimientoClientes.resources
 C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.MantenimientoProductos.resources
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.ConsultarCliente.resources
+C:\Cursos\C#\TentacionGolosinas\TentacionGolosinas\obj\Debug\TentacionGolosinas.ConsultarProductos.resources
