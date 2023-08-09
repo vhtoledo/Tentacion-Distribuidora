@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textId_Producto = new System.Windows.Forms.TextBox();
             this.textDesc_Producto = new System.Windows.Forms.TextBox();
-            this.textPre_Producto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textPrecio_Producto = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textId_Producto = new System.Windows.Forms.TextBox();
+            this.textPre_Producto = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,13 +70,6 @@
             this.btnSalir.Location = new System.Drawing.Point(415, 305);
             this.btnSalir.Size = new System.Drawing.Size(93, 23);
             // 
-            // textId_Producto
-            // 
-            this.textId_Producto.Location = new System.Drawing.Point(170, 81);
-            this.textId_Producto.Name = "textId_Producto";
-            this.textId_Producto.Size = new System.Drawing.Size(154, 20);
-            this.textId_Producto.TabIndex = 5;
-            // 
             // textDesc_Producto
             // 
             this.textDesc_Producto.Location = new System.Drawing.Point(170, 127);
@@ -83,13 +77,6 @@
             this.textDesc_Producto.Name = "textDesc_Producto";
             this.textDesc_Producto.Size = new System.Drawing.Size(154, 55);
             this.textDesc_Producto.TabIndex = 6;
-            // 
-            // textPre_Producto
-            // 
-            this.textPre_Producto.Location = new System.Drawing.Point(170, 203);
-            this.textPre_Producto.Name = "textPre_Producto";
-            this.textPre_Producto.Size = new System.Drawing.Size(154, 20);
-            this.textPre_Producto.TabIndex = 7;
             // 
             // label1
             // 
@@ -150,6 +137,20 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // textId_Producto
+            // 
+            this.textId_Producto.Location = new System.Drawing.Point(170, 81);
+            this.textId_Producto.Name = "textId_Producto";
+            this.textId_Producto.Size = new System.Drawing.Size(154, 20);
+            this.textId_Producto.TabIndex = 15;
+            // 
+            // textPre_Producto
+            // 
+            this.textPre_Producto.Location = new System.Drawing.Point(170, 207);
+            this.textPre_Producto.Name = "textPre_Producto";
+            this.textPre_Producto.Size = new System.Drawing.Size(154, 20);
+            this.textPre_Producto.TabIndex = 16;
+            // 
             // MantenimientoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,14 +158,14 @@
             this.BackgroundImage = global::TentacionGolosinas.Properties.Resources.fondo6;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(536, 359);
+            this.Controls.Add(this.textPre_Producto);
+            this.Controls.Add(this.textId_Producto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textPrecio_Producto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textPre_Producto);
             this.Controls.Add(this.textDesc_Producto);
-            this.Controls.Add(this.textId_Producto);
             this.Name = "MantenimientoProductos";
             this.Text = "MantenimientoProductos";
             this.Load += new System.EventHandler(this.MantenimientoProductos_Load);
@@ -173,14 +174,15 @@
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.button3, 0);
             this.Controls.SetChildIndex(this.button4, 0);
-            this.Controls.SetChildIndex(this.textId_Producto, 0);
             this.Controls.SetChildIndex(this.textDesc_Producto, 0);
-            this.Controls.SetChildIndex(this.textPre_Producto, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.textPrecio_Producto, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.textId_Producto, 0);
+            this.Controls.SetChildIndex(this.textPre_Producto, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -188,14 +190,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textId_Producto;
         private System.Windows.Forms.TextBox textDesc_Producto;
-        private System.Windows.Forms.TextBox textPre_Producto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label textPrecio_Producto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textId_Producto;
+        private System.Windows.Forms.TextBox textPre_Producto;
     }
 }

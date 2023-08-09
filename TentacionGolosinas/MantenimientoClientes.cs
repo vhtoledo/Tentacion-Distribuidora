@@ -25,16 +25,23 @@ namespace TentacionGolosinas
 
         public override Boolean Guardar()
         {
-            try
+            if(Biblioteca.ValidarFormulario(this, errorProvider1) == false)
             {
-                string insertar = string.Format("EXEC ActualizarClientes '{0}', '{1}', '{2}', '{3}', '{4}'", textId_Cliente.Text.Trim(), textNombre.Text.Trim(), textApellido.Text.Trim(), textTel.Text.Trim(), textEmail.Text.Trim());
-                Biblioteca.Herramientas(insertar);
-                MessageBox.Show("Cliente guardado correctamente");
-                return true;
+                try
+                {
+                    string insertar = string.Format("EXEC ActualizarClientes '{0}', '{1}', '{2}', '{3}', '{4}'", textId_Cliente.Text.Trim(), textNombre.Text.Trim(), textApellido.Text.Trim(), textTel.Text.Trim(), textEmail.Text.Trim());
+                    Biblioteca.Herramientas(insertar);
+                    MessageBox.Show("Cliente guardado correctamente");
+                    return true;
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Ha ocurrido un error: " + error);
+                    return false;
+                }
             }
-            catch (Exception error)
+            else
             {
-                MessageBox.Show("Ha ocurrido un error: " + error);
                 return false;
             }
         }
@@ -54,6 +61,11 @@ namespace TentacionGolosinas
 
             }
 
+        }
+
+        private void textId_Cliente_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }

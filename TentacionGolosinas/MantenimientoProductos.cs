@@ -21,6 +21,7 @@ namespace TentacionGolosinas
         private void MantenimientoProductos_Load(object sender, EventArgs e)
         {
 
+   
         }
 
         public override Boolean Guardar()

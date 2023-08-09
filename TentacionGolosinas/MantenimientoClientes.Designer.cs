@@ -33,13 +33,13 @@
             this.textApellido_Cliente = new System.Windows.Forms.Label();
             this.textNombre_Cliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textApellido = new System.Windows.Forms.TextBox();
-            this.textNombre = new System.Windows.Forms.TextBox();
-            this.textId_Cliente = new System.Windows.Forms.TextBox();
-            this.textTel = new System.Windows.Forms.TextBox();
-            this.textEmail = new System.Windows.Forms.TextBox();
             this.textTel_Cliente = new System.Windows.Forms.Label();
             this.textEmail_Cliente = new System.Windows.Forms.Label();
+            this.textEmail = new LibreriaDLL.ErrorTxtBox();
+            this.textTel = new LibreriaDLL.ErrorTxtBox();
+            this.textApellido = new LibreriaDLL.ErrorTxtBox();
+            this.textNombre = new LibreriaDLL.ErrorTxtBox();
+            this.textId_Cliente = new LibreriaDLL.ErrorTxtBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@
             this.textApellido_Cliente.BackColor = System.Drawing.Color.Transparent;
             this.textApellido_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textApellido_Cliente.ForeColor = System.Drawing.Color.White;
-            this.textApellido_Cliente.Location = new System.Drawing.Point(35, 167);
+            this.textApellido_Cliente.Location = new System.Drawing.Point(35, 168);
             this.textApellido_Cliente.Name = "textApellido_Cliente";
             this.textApellido_Cliente.Size = new System.Drawing.Size(69, 16);
             this.textApellido_Cliente.TabIndex = 18;
@@ -132,48 +132,13 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Id Cliente:";
             // 
-            // textApellido
-            // 
-            this.textApellido.Location = new System.Drawing.Point(151, 166);
-            this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(154, 20);
-            this.textApellido.TabIndex = 15;
-            // 
-            // textNombre
-            // 
-            this.textNombre.Location = new System.Drawing.Point(151, 125);
-            this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(154, 20);
-            this.textNombre.TabIndex = 14;
-            // 
-            // textId_Cliente
-            // 
-            this.textId_Cliente.Location = new System.Drawing.Point(151, 88);
-            this.textId_Cliente.Name = "textId_Cliente";
-            this.textId_Cliente.Size = new System.Drawing.Size(154, 20);
-            this.textId_Cliente.TabIndex = 13;
-            // 
-            // textTel
-            // 
-            this.textTel.Location = new System.Drawing.Point(151, 204);
-            this.textTel.Name = "textTel";
-            this.textTel.Size = new System.Drawing.Size(154, 20);
-            this.textTel.TabIndex = 21;
-            // 
-            // textEmail
-            // 
-            this.textEmail.Location = new System.Drawing.Point(151, 242);
-            this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(154, 20);
-            this.textEmail.TabIndex = 22;
-            // 
             // textTel_Cliente
             // 
             this.textTel_Cliente.AutoSize = true;
             this.textTel_Cliente.BackColor = System.Drawing.Color.Transparent;
             this.textTel_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTel_Cliente.ForeColor = System.Drawing.Color.White;
-            this.textTel_Cliente.Location = new System.Drawing.Point(35, 208);
+            this.textTel_Cliente.Location = new System.Drawing.Point(35, 203);
             this.textTel_Cliente.Name = "textTel_Cliente";
             this.textTel_Cliente.Size = new System.Drawing.Size(73, 16);
             this.textTel_Cliente.TabIndex = 23;
@@ -185,11 +150,62 @@
             this.textEmail_Cliente.BackColor = System.Drawing.Color.Transparent;
             this.textEmail_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEmail_Cliente.ForeColor = System.Drawing.Color.White;
-            this.textEmail_Cliente.Location = new System.Drawing.Point(35, 246);
+            this.textEmail_Cliente.Location = new System.Drawing.Point(35, 239);
             this.textEmail_Cliente.Name = "textEmail_Cliente";
             this.textEmail_Cliente.Size = new System.Drawing.Size(50, 16);
             this.textEmail_Cliente.TabIndex = 24;
             this.textEmail_Cliente.Text = "Email:";
+            // 
+            // textEmail
+            // 
+            this.textEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEmail.Location = new System.Drawing.Point(151, 235);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(154, 20);
+            this.textEmail.TabIndex = 29;
+            this.textEmail.Validar = true;
+            this.textEmail.ValidarNumeros = false;
+            // 
+            // textTel
+            // 
+            this.textTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTel.Location = new System.Drawing.Point(151, 199);
+            this.textTel.Name = "textTel";
+            this.textTel.Size = new System.Drawing.Size(154, 20);
+            this.textTel.TabIndex = 28;
+            this.textTel.Validar = true;
+            this.textTel.ValidarNumeros = true;
+            // 
+            // textApellido
+            // 
+            this.textApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textApellido.Location = new System.Drawing.Point(151, 163);
+            this.textApellido.Name = "textApellido";
+            this.textApellido.Size = new System.Drawing.Size(154, 20);
+            this.textApellido.TabIndex = 27;
+            this.textApellido.Validar = true;
+            this.textApellido.ValidarNumeros = false;
+            // 
+            // textNombre
+            // 
+            this.textNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textNombre.Location = new System.Drawing.Point(151, 125);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(154, 20);
+            this.textNombre.TabIndex = 26;
+            this.textNombre.Validar = true;
+            this.textNombre.ValidarNumeros = false;
+            // 
+            // textId_Cliente
+            // 
+            this.textId_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textId_Cliente.Location = new System.Drawing.Point(151, 88);
+            this.textId_Cliente.Name = "textId_Cliente";
+            this.textId_Cliente.Size = new System.Drawing.Size(154, 20);
+            this.textId_Cliente.TabIndex = 25;
+            this.textId_Cliente.Validar = true;
+            this.textId_Cliente.ValidarNumeros = true;
+            this.textId_Cliente.TextChanged += new System.EventHandler(this.textId_Cliente_TextChanged);
             // 
             // MantenimientoClientes
             // 
@@ -198,18 +214,18 @@
             this.BackgroundImage = global::TentacionGolosinas.Properties.Resources.fondo6;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(536, 398);
-            this.Controls.Add(this.textEmail_Cliente);
-            this.Controls.Add(this.textTel_Cliente);
             this.Controls.Add(this.textEmail);
             this.Controls.Add(this.textTel);
+            this.Controls.Add(this.textApellido);
+            this.Controls.Add(this.textNombre);
+            this.Controls.Add(this.textId_Cliente);
+            this.Controls.Add(this.textEmail_Cliente);
+            this.Controls.Add(this.textTel_Cliente);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textApellido_Cliente);
             this.Controls.Add(this.textNombre_Cliente);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textApellido);
-            this.Controls.Add(this.textNombre);
-            this.Controls.Add(this.textId_Cliente);
             this.Name = "MantenimientoClientes";
             this.Text = "MantenimientoClientes";
             this.Load += new System.EventHandler(this.MantenimientoClientes_Load);
@@ -218,18 +234,18 @@
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.button3, 0);
             this.Controls.SetChildIndex(this.button4, 0);
-            this.Controls.SetChildIndex(this.textId_Cliente, 0);
-            this.Controls.SetChildIndex(this.textNombre, 0);
-            this.Controls.SetChildIndex(this.textApellido, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.textNombre_Cliente, 0);
             this.Controls.SetChildIndex(this.textApellido_Cliente, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.Controls.SetChildIndex(this.textTel, 0);
-            this.Controls.SetChildIndex(this.textEmail, 0);
             this.Controls.SetChildIndex(this.textTel_Cliente, 0);
             this.Controls.SetChildIndex(this.textEmail_Cliente, 0);
+            this.Controls.SetChildIndex(this.textId_Cliente, 0);
+            this.Controls.SetChildIndex(this.textNombre, 0);
+            this.Controls.SetChildIndex(this.textApellido, 0);
+            this.Controls.SetChildIndex(this.textTel, 0);
+            this.Controls.SetChildIndex(this.textEmail, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -243,12 +259,12 @@
         private System.Windows.Forms.Label textApellido_Cliente;
         private System.Windows.Forms.Label textNombre_Cliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textApellido;
-        private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.TextBox textId_Cliente;
-        private System.Windows.Forms.TextBox textTel;
-        private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.Label textTel_Cliente;
         private System.Windows.Forms.Label textEmail_Cliente;
+        private LibreriaDLL.ErrorTxtBox textId_Cliente;
+        private LibreriaDLL.ErrorTxtBox textNombre;
+        private LibreriaDLL.ErrorTxtBox textApellido;
+        private LibreriaDLL.ErrorTxtBox textTel;
+        private LibreriaDLL.ErrorTxtBox textEmail;
     }
 }
