@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.BtBuscar = new System.Windows.Forms.Button();
+            this.BtClientes = new System.Windows.Forms.Button();
+            this.BtProductos = new System.Windows.Forms.Button();
+            this.BtEliminar = new System.Windows.Forms.Button();
+            this.BtColocar = new System.Windows.Forms.Button();
+            this.BtFacturar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.errorTxtBox2 = new LibreriaDLL.ErrorTxtBox();
-            this.errorTxtBox3 = new LibreriaDLL.ErrorTxtBox();
-            this.errorTxtBox4 = new LibreriaDLL.ErrorTxtBox();
-            this.errorTxtBox6 = new LibreriaDLL.ErrorTxtBox();
+            this.TxtCodigoCliente = new LibreriaDLL.ErrorTxtBox();
+            this.TxtCliente = new LibreriaDLL.ErrorTxtBox();
+            this.TxtCodigoProducto = new LibreriaDLL.ErrorTxtBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtNuevo = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,12 +51,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.errorTxtBox5 = new LibreriaDLL.ErrorTxtBox();
-            this.errorTxtBox7 = new LibreriaDLL.ErrorTxtBox();
-            this.errorTxtBox8 = new LibreriaDLL.ErrorTxtBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.TxtDescripcion = new LibreriaDLL.ErrorTxtBox();
+            this.TxtPrecio = new LibreriaDLL.ErrorTxtBox();
+            this.TxtCantidad = new LibreriaDLL.ErrorTxtBox();
+            this.lbVendedor = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -65,65 +68,66 @@
             this.btnSalir.Location = new System.Drawing.Point(1261, 597);
             this.btnSalir.Size = new System.Drawing.Size(122, 31);
             // 
-            // button1
+            // BtBuscar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(533, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtBuscar.Location = new System.Drawing.Point(533, 114);
+            this.BtBuscar.Name = "BtBuscar";
+            this.BtBuscar.Size = new System.Drawing.Size(104, 32);
+            this.BtBuscar.TabIndex = 1;
+            this.BtBuscar.Text = "Buscar";
+            this.BtBuscar.UseVisualStyleBackColor = true;
+            this.BtBuscar.Click += new System.EventHandler(this.BtBuscar_Click);
             // 
-            // button2
+            // BtClientes
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(714, 235);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Clientes";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtClientes.Location = new System.Drawing.Point(714, 235);
+            this.BtClientes.Name = "BtClientes";
+            this.BtClientes.Size = new System.Drawing.Size(102, 23);
+            this.BtClientes.TabIndex = 2;
+            this.BtClientes.Text = "Clientes";
+            this.BtClientes.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtProductos
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(828, 235);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Productos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtProductos.Location = new System.Drawing.Point(828, 235);
+            this.BtProductos.Name = "BtProductos";
+            this.BtProductos.Size = new System.Drawing.Size(102, 23);
+            this.BtProductos.TabIndex = 3;
+            this.BtProductos.Text = "Productos";
+            this.BtProductos.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // BtEliminar
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(941, 235);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtEliminar.Location = new System.Drawing.Point(941, 235);
+            this.BtEliminar.Name = "BtEliminar";
+            this.BtEliminar.Size = new System.Drawing.Size(102, 23);
+            this.BtEliminar.TabIndex = 4;
+            this.BtEliminar.Text = "Eliminar";
+            this.BtEliminar.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // BtColocar
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1055, 235);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Colocar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtColocar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtColocar.Location = new System.Drawing.Point(1055, 235);
+            this.BtColocar.Name = "BtColocar";
+            this.BtColocar.Size = new System.Drawing.Size(102, 23);
+            this.BtColocar.TabIndex = 5;
+            this.BtColocar.Text = "Colocar";
+            this.BtColocar.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // BtFacturar
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1169, 235);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(102, 23);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Facturar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtFacturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtFacturar.Location = new System.Drawing.Point(1169, 235);
+            this.BtFacturar.Name = "BtFacturar";
+            this.BtFacturar.Size = new System.Drawing.Size(102, 23);
+            this.BtFacturar.TabIndex = 6;
+            this.BtFacturar.Text = "Facturar";
+            this.BtFacturar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -148,45 +152,37 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "label2";
             // 
-            // errorTxtBox2
+            // TxtCodigoCliente
             // 
-            this.errorTxtBox2.Location = new System.Drawing.Point(158, 116);
-            this.errorTxtBox2.Multiline = true;
-            this.errorTxtBox2.Name = "errorTxtBox2";
-            this.errorTxtBox2.Size = new System.Drawing.Size(353, 30);
-            this.errorTxtBox2.TabIndex = 16;
-            this.errorTxtBox2.Validar = false;
-            this.errorTxtBox2.ValidarNumeros = false;
+            this.TxtCodigoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigoCliente.Location = new System.Drawing.Point(158, 116);
+            this.TxtCodigoCliente.Multiline = true;
+            this.TxtCodigoCliente.Name = "TxtCodigoCliente";
+            this.TxtCodigoCliente.Size = new System.Drawing.Size(353, 30);
+            this.TxtCodigoCliente.TabIndex = 16;
+            this.TxtCodigoCliente.Validar = true;
+            this.TxtCodigoCliente.ValidarNumeros = false;
             // 
-            // errorTxtBox3
+            // TxtCliente
             // 
-            this.errorTxtBox3.Location = new System.Drawing.Point(158, 165);
-            this.errorTxtBox3.Multiline = true;
-            this.errorTxtBox3.Name = "errorTxtBox3";
-            this.errorTxtBox3.Size = new System.Drawing.Size(353, 27);
-            this.errorTxtBox3.TabIndex = 17;
-            this.errorTxtBox3.Validar = false;
-            this.errorTxtBox3.ValidarNumeros = false;
+            this.TxtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCliente.Location = new System.Drawing.Point(158, 165);
+            this.TxtCliente.Multiline = true;
+            this.TxtCliente.Name = "TxtCliente";
+            this.TxtCliente.Size = new System.Drawing.Size(353, 27);
+            this.TxtCliente.TabIndex = 17;
+            this.TxtCliente.Validar = true;
+            this.TxtCliente.ValidarNumeros = false;
             // 
-            // errorTxtBox4
+            // TxtCodigoProducto
             // 
-            this.errorTxtBox4.Location = new System.Drawing.Point(37, 271);
-            this.errorTxtBox4.Multiline = true;
-            this.errorTxtBox4.Name = "errorTxtBox4";
-            this.errorTxtBox4.Size = new System.Drawing.Size(150, 28);
-            this.errorTxtBox4.TabIndex = 18;
-            this.errorTxtBox4.Validar = false;
-            this.errorTxtBox4.ValidarNumeros = false;
-            // 
-            // errorTxtBox6
-            // 
-            this.errorTxtBox6.Location = new System.Drawing.Point(1024, 599);
-            this.errorTxtBox6.Multiline = true;
-            this.errorTxtBox6.Name = "errorTxtBox6";
-            this.errorTxtBox6.Size = new System.Drawing.Size(119, 29);
-            this.errorTxtBox6.TabIndex = 20;
-            this.errorTxtBox6.Validar = false;
-            this.errorTxtBox6.ValidarNumeros = false;
+            this.TxtCodigoProducto.Location = new System.Drawing.Point(84, 279);
+            this.TxtCodigoProducto.Multiline = true;
+            this.TxtCodigoProducto.Name = "TxtCodigoProducto";
+            this.TxtCodigoProducto.Size = new System.Drawing.Size(150, 28);
+            this.TxtCodigoProducto.TabIndex = 18;
+            this.TxtCodigoProducto.Validar = true;
+            this.TxtCodigoProducto.ValidarNumeros = false;
             // 
             // dataGridView1
             // 
@@ -204,15 +200,15 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
-            // button7
+            // BtNuevo
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1283, 235);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(102, 23);
-            this.button7.TabIndex = 24;
-            this.button7.Text = "Nuevo";
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtNuevo.Location = new System.Drawing.Point(1283, 235);
+            this.BtNuevo.Name = "BtNuevo";
+            this.BtNuevo.Size = new System.Drawing.Size(102, 23);
+            this.BtNuevo.TabIndex = 24;
+            this.BtNuevo.Text = "Nuevo";
+            this.BtNuevo.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -311,44 +307,55 @@
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label8.UseCompatibleTextRendering = true;
             // 
-            // errorTxtBox5
+            // TxtDescripcion
             // 
-            this.errorTxtBox5.Location = new System.Drawing.Point(193, 271);
-            this.errorTxtBox5.Multiline = true;
-            this.errorTxtBox5.Name = "errorTxtBox5";
-            this.errorTxtBox5.Size = new System.Drawing.Size(150, 28);
-            this.errorTxtBox5.TabIndex = 33;
-            this.errorTxtBox5.Validar = false;
-            this.errorTxtBox5.ValidarNumeros = false;
+            this.TxtDescripcion.Location = new System.Drawing.Point(382, 279);
+            this.TxtDescripcion.Multiline = true;
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(183, 28);
+            this.TxtDescripcion.TabIndex = 33;
+            this.TxtDescripcion.Validar = true;
+            this.TxtDescripcion.ValidarNumeros = false;
             // 
-            // errorTxtBox7
+            // TxtPrecio
             // 
-            this.errorTxtBox7.Location = new System.Drawing.Point(349, 271);
-            this.errorTxtBox7.Multiline = true;
-            this.errorTxtBox7.Name = "errorTxtBox7";
-            this.errorTxtBox7.Size = new System.Drawing.Size(150, 28);
-            this.errorTxtBox7.TabIndex = 34;
-            this.errorTxtBox7.Validar = false;
-            this.errorTxtBox7.ValidarNumeros = false;
+            this.TxtPrecio.Location = new System.Drawing.Point(705, 279);
+            this.TxtPrecio.Multiline = true;
+            this.TxtPrecio.Name = "TxtPrecio";
+            this.TxtPrecio.Size = new System.Drawing.Size(183, 28);
+            this.TxtPrecio.TabIndex = 34;
+            this.TxtPrecio.Validar = true;
+            this.TxtPrecio.ValidarNumeros = false;
             // 
-            // errorTxtBox8
+            // TxtCantidad
             // 
-            this.errorTxtBox8.Location = new System.Drawing.Point(505, 271);
-            this.errorTxtBox8.Multiline = true;
-            this.errorTxtBox8.Name = "errorTxtBox8";
-            this.errorTxtBox8.Size = new System.Drawing.Size(150, 28);
-            this.errorTxtBox8.TabIndex = 35;
-            this.errorTxtBox8.Validar = false;
-            this.errorTxtBox8.ValidarNumeros = false;
+            this.TxtCantidad.Location = new System.Drawing.Point(941, 279);
+            this.TxtCantidad.Multiline = true;
+            this.TxtCantidad.Name = "TxtCantidad";
+            this.TxtCantidad.Size = new System.Drawing.Size(182, 28);
+            this.TxtCantidad.TabIndex = 35;
+            this.TxtCantidad.Validar = true;
+            this.TxtCantidad.ValidarNumeros = false;
             // 
-            // label11
+            // lbVendedor
             // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(158, 67);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(353, 31);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "label11";
+            this.lbVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVendedor.Location = new System.Drawing.Point(158, 67);
+            this.lbVendedor.Name = "lbVendedor";
+            this.lbVendedor.Size = new System.Drawing.Size(353, 31);
+            this.lbVendedor.TabIndex = 36;
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Location = new System.Drawing.Point(1016, 605);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(100, 23);
+            this.lbTotal.TabIndex = 37;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Facturacion
             // 
@@ -357,10 +364,11 @@
             this.BackgroundImage = global::TentacionGolosinas.Properties.Resources.fondo9;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1422, 659);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.errorTxtBox8);
-            this.Controls.Add(this.errorTxtBox7);
-            this.Controls.Add(this.errorTxtBox5);
+            this.Controls.Add(this.lbTotal);
+            this.Controls.Add(this.lbVendedor);
+            this.Controls.Add(this.TxtCantidad);
+            this.Controls.Add(this.TxtPrecio);
+            this.Controls.Add(this.TxtDescripcion);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -369,38 +377,37 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.BtNuevo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.errorTxtBox6);
-            this.Controls.Add(this.errorTxtBox4);
-            this.Controls.Add(this.errorTxtBox3);
-            this.Controls.Add(this.errorTxtBox2);
+            this.Controls.Add(this.TxtCodigoProducto);
+            this.Controls.Add(this.TxtCliente);
+            this.Controls.Add(this.TxtCodigoCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtFacturar);
+            this.Controls.Add(this.BtColocar);
+            this.Controls.Add(this.BtEliminar);
+            this.Controls.Add(this.BtProductos);
+            this.Controls.Add(this.BtClientes);
+            this.Controls.Add(this.BtBuscar);
             this.Name = "Facturacion";
             this.Text = "Facturacion";
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.button3, 0);
-            this.Controls.SetChildIndex(this.button4, 0);
-            this.Controls.SetChildIndex(this.button5, 0);
-            this.Controls.SetChildIndex(this.button6, 0);
+            this.Load += new System.EventHandler(this.Facturacion_Load);
+            this.Controls.SetChildIndex(this.BtBuscar, 0);
+            this.Controls.SetChildIndex(this.BtClientes, 0);
+            this.Controls.SetChildIndex(this.BtProductos, 0);
+            this.Controls.SetChildIndex(this.BtEliminar, 0);
+            this.Controls.SetChildIndex(this.BtColocar, 0);
+            this.Controls.SetChildIndex(this.BtFacturar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.errorTxtBox2, 0);
-            this.Controls.SetChildIndex(this.errorTxtBox3, 0);
-            this.Controls.SetChildIndex(this.errorTxtBox4, 0);
-            this.Controls.SetChildIndex(this.errorTxtBox6, 0);
+            this.Controls.SetChildIndex(this.TxtCodigoCliente, 0);
+            this.Controls.SetChildIndex(this.TxtCliente, 0);
+            this.Controls.SetChildIndex(this.TxtCodigoProducto, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.Controls.SetChildIndex(this.button7, 0);
+            this.Controls.SetChildIndex(this.BtNuevo, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
@@ -410,12 +417,14 @@
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.errorTxtBox5, 0);
-            this.Controls.SetChildIndex(this.errorTxtBox7, 0);
-            this.Controls.SetChildIndex(this.errorTxtBox8, 0);
-            this.Controls.SetChildIndex(this.label11, 0);
+            this.Controls.SetChildIndex(this.TxtDescripcion, 0);
+            this.Controls.SetChildIndex(this.TxtPrecio, 0);
+            this.Controls.SetChildIndex(this.TxtCantidad, 0);
+            this.Controls.SetChildIndex(this.lbVendedor, 0);
+            this.Controls.SetChildIndex(this.lbTotal, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,21 +432,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BtBuscar;
+        private System.Windows.Forms.Button BtClientes;
+        private System.Windows.Forms.Button BtProductos;
+        private System.Windows.Forms.Button BtEliminar;
+        private System.Windows.Forms.Button BtColocar;
+        private System.Windows.Forms.Button BtFacturar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private LibreriaDLL.ErrorTxtBox errorTxtBox2;
-        private LibreriaDLL.ErrorTxtBox errorTxtBox3;
-        private LibreriaDLL.ErrorTxtBox errorTxtBox4;
-        private LibreriaDLL.ErrorTxtBox errorTxtBox6;
+        private LibreriaDLL.ErrorTxtBox TxtCodigoCliente;
+        private LibreriaDLL.ErrorTxtBox TxtCliente;
+        private LibreriaDLL.ErrorTxtBox TxtCodigoProducto;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BtNuevo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label3;
@@ -446,9 +454,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private LibreriaDLL.ErrorTxtBox errorTxtBox5;
-        private LibreriaDLL.ErrorTxtBox errorTxtBox7;
-        private LibreriaDLL.ErrorTxtBox errorTxtBox8;
-        private System.Windows.Forms.Label label11;
+        private LibreriaDLL.ErrorTxtBox TxtDescripcion;
+        private LibreriaDLL.ErrorTxtBox TxtPrecio;
+        private LibreriaDLL.ErrorTxtBox TxtCantidad;
+        private System.Windows.Forms.Label lbVendedor;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

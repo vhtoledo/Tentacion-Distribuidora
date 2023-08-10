@@ -144,6 +144,9 @@
     <EmbeddedResource Include="ContenedorPrincipal.resx">
       <DependentUpon>ContenedorPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion.resx">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +242,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo9.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

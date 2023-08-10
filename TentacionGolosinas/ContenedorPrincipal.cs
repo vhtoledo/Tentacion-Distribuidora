@@ -131,5 +131,12 @@ namespace TentacionGolosinas
             ConsulClien.MdiParent = this;
             ConsulClien.Show();
         }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facturacion factu = new Facturacion();
+            factu.MdiParent = this;
+            factu.Show();
+        }
     }
 }
