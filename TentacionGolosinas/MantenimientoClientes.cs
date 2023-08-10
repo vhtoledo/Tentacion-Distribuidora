@@ -67,5 +67,23 @@ namespace TentacionGolosinas
         {
             errorProvider1.Clear();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textId_Cliente.Text.Trim()) == false && string.IsNullOrEmpty(textNombre.Text.Trim()) == false && string.IsNullOrEmpty(textApellido.Text.Trim()) == false && string.IsNullOrEmpty(textTel.Text.Trim()) == false && string.IsNullOrEmpty(textEmail.Text.Trim()) == false)
+            {
+                textId_Cliente.Text = "";
+                textNombre.Text = "";
+                textApellido.Text = "";
+                textTel.Text = "";
+                textEmail.Text = "";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConsultarCliente ConsulClien = new ConsultarCliente();
+            ConsulClien.Show();
+        }
     }
 }

@@ -40,6 +40,7 @@
             this.textApellido = new LibreriaDLL.ErrorTxtBox();
             this.textNombre = new LibreriaDLL.ErrorTxtBox();
             this.textId_Cliente = new LibreriaDLL.ErrorTxtBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(31, 296);
             this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -60,6 +62,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(272, 296);
             this.button3.Size = new System.Drawing.Size(93, 23);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -246,6 +249,7 @@
             this.Controls.SetChildIndex(this.textApellido, 0);
             this.Controls.SetChildIndex(this.textTel, 0);
             this.Controls.SetChildIndex(this.textEmail, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

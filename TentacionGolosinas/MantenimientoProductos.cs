@@ -26,16 +26,23 @@ namespace TentacionGolosinas
 
         public override Boolean Guardar()
         {
-            try
+            if (Biblioteca.ValidarFormulario(this, errorProvider1) == false)
             {
-                string insertar = string.Format("EXEC ActualizarProductos '{0}', '{1}', '{2}'", textId_Producto.Text.Trim(), textDesc_Producto.Text.Trim(), textPre_Producto.Text.Trim());
-                Biblioteca.Herramientas(insertar);
-                MessageBox.Show("Producto guardado correctamente");
-                return true;
+                try
+                {
+                    string insertar = string.Format("EXEC ActualizarProductos '{0}', '{1}', '{2}'", textId_Producto.Text.Trim(), textDesc_Producto.Text.Trim(), textPre_Producto.Text.Trim());
+                    Biblioteca.Herramientas(insertar);
+                    MessageBox.Show("Producto guardado correctamente");
+                    return true;
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Ha ocurrido un error: " + error);
+                    return false;
+                }
             }
-            catch (Exception error) 
+            else
             {
-                MessageBox.Show("Ha ocurrido un error: " +error);
                 return false;
             }
         }
@@ -55,6 +62,27 @@ namespace TentacionGolosinas
 
             }
 
+        }
+
+        private void textId_Producto_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(textId_Producto.Text.Trim()) == false && string.IsNullOrEmpty(textDesc_Producto.Text.Trim()) == false && string.IsNullOrEmpty(textPre_Producto.Text.Trim()) == false)
+            {
+                textId_Producto.Text = "";
+                textDesc_Producto.Text = "";
+                textPre_Producto.Text = "";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConsultarProductos ConsulPro = new ConsultarProductos();
+            ConsulPro.Show();
         }
     }
 }

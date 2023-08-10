@@ -30,6 +30,10 @@
         {
             this.SuspendLayout();
             // 
+            // button1
+            // 
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ConsultarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
