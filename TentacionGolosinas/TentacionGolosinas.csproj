@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo3.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LibreriaDLL">
       <HintPath>..\LibreriaDLL\bin\Debug\LibreriaDLL.dll</HintPath>
@@ -309,6 +312,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo10.jpg" />
+    <Content Include="logo3.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
