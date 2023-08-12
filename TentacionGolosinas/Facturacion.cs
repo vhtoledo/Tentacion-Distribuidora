@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -168,6 +169,41 @@ namespace TentacionGolosinas
             total = 0;
 
             TxtCodigoCliente.Focus();
+        }
+
+        private void BtFacturar_Click(object sender, EventArgs e)
+        {
+            if(contadorFila != 0)
+            {
+                try
+                {
+                    string cmd = string.Format("Exec ActualizarFacturas '{0}'", TxtCodigoCliente.Text.Trim());
+
+                    DataSet DS = Biblioteca.Herramientas(cmd);
+
+                    string NumeroFactura = DS.Tables[0].Rows[0]["NumeroFactura"].ToString().Trim();
+
+                    foreach(DataGridViewRow Fila in dataGridView1.Rows)
+                    {
+                        cmd = string.Format("Exec ActualizarDetalles '{0}','{1}','{2}','{3}'", NumeroFactura, Fila.Cells[0].Value.ToString(), Fila.Cells[2].Value.ToString(), Fila.Cells[3].Value.ToString());
+                        DS = Biblioteca.Herramientas(cmd);
+                    }
+                    cmd = "Exec DatosFactura" + NumeroFactura;
+
+                    DS = Biblioteca.Herramientas(cmd);
+
+                    Factura fac = new Factura();
+                    fac.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
+                    fac.ShowDialog();
+
+                    Nuevo();
+                }
+                catch(Exception error)
+                {
+                    MessageBox.Show("Error: " + error.Message);
+                }
+            }
+           
         }
     }
 }
